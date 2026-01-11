@@ -13,6 +13,7 @@ while True:
         break
 
     results = model.track(frame, classes=[39], persist=True, verbose=False) 
+    #print(results)
     annotated_frame = results[0].plot()
 
     if results[0].boxes and results[0].boxes.id is not None:
